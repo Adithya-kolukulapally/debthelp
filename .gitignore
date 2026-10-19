@@ -1,0 +1,29 @@
+# Dependencies and generated build output
+node_modules/
+dist/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+supabase/.env
+supabase/.temp/
+
+# Local tooling state
+.DS_Store
+Thumbs.db
+*.log
+
+# Downloaded reference-site snapshot and third-party assets
+/connect.facebook.net/
+/debthelp.dacl.ca/
+/fonts.googleapis.com/
+/fonts.gstatic.com/
+/ik.imagekit.io/
+/l.clarity.ms/
+/od-18c216b54e2045bdbb2d2f70bc4834b0.ecs.us-east-2.on.aws/
+/prism.meridianmix.com/
+/scripts.clarity.ms/
+/www.clarity.ms/
+/www.facebook.com/
+/www.googletagmanager.com/
