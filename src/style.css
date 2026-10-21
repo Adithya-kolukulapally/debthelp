@@ -229,3 +229,123 @@ body{background:#fff}
 .step-card:hover,.process.reveal-enabled .step-card.is-visible:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(15,23,42,.11)}
 @media(max-width:760px){.section h2{font-size:40px}.section-intro>p{font-size:14px}.step-card{min-height:0;padding:19px}.step-card h3{font-size:18px}.step-card p{font-size:13px}.step-tag{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.process.reveal-enabled .section-intro,.process.reveal-enabled .step-card{opacity:1;transform:none;transition:none}.step-card{transition:none}.step-card:hover,.process.reveal-enabled .step-card.is-visible:hover{transform:none}}
+html{overflow-x:clip}
+.mobile-contact-link{display:none}
+@media(max-width:860px){
+  .header{top:10px;width:calc(100% - 32px);padding:8px 14px}
+  .header .nav{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;padding:12px 18px;background:rgba(255,255,255,.98);border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 14px 30px rgba(15,23,42,.12);align-items:stretch;flex-direction:column;gap:0}
+  .header .nav.open{display:flex}
+  .header .nav a{padding:12px 4px;border-bottom:1px solid #eef2f7;font-size:14px}
+  .header .nav a:last-child{border-bottom:0;color:#2563eb;font-weight:700}
+  .header .nav.open .mobile-contact-link{display:block}
+  .header-right{margin-left:auto;margin-right:8px}
+  .phone-link{padding:9px 12px;font-size:12px}
+  .menu-button{display:grid;place-items:center;width:36px;height:36px;border:0;color:#2563eb}
+  .hero-inner{grid-template-columns:1fr;max-width:700px;padding:100px 24px 52px;gap:30px}
+  .hero-copy{padding:0}
+  .home-summary{max-width:none}
+  .trust-row{flex-wrap:wrap;gap:9px 14px}
+  .assessment-page{min-height:0;padding:104px 24px 56px;grid-template-columns:1fr;gap:26px}
+  .assessment-intro,.assessment-form-wrap{width:100%;max-width:640px;justify-self:center}
+  .section{grid-template-columns:1fr;gap:28px;padding:68px 24px}
+  .section-intro{max-width:640px}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .step-card:last-child{grid-column:1/-1}
+  .quote-section{max-width:720px}
+  .faq-section{grid-template-columns:1fr;gap:30px}
+  .footer-main{gap:18px;flex-wrap:wrap}
+}
+@media(max-width:600px){
+  .hero-inner{padding:94px 20px 44px;gap:24px}
+  .hero h1{font-size:clamp(42px,11vw,58px);line-height:1.02}
+  .hero-desc{font-size:15px;line-height:1.65}
+  .hero-ctas{flex-wrap:wrap;gap:12px;margin-top:20px}
+  .hero-ctas .button{height:46px}
+  .trust-row{font-size:10px;margin-top:22px}
+  .trust-row i{display:none}
+  .home-summary{padding:22px 20px;border-radius:16px}
+  .summary-points{gap:10px;margin-bottom:0}
+  .proof-strip{grid-template-columns:1fr 1fr;padding:20px;gap:15px}
+  .proof-label{grid-column:1/-1}
+  .proof-sign{text-align:left!important}
+  .section{padding:56px 20px;gap:23px}
+  .section h2,.options-heading h2,.quote-section h2{font-size:36px}
+  .steps{grid-template-columns:1fr;gap:11px}
+  .step-card:last-child{grid-column:auto}
+  .step-card{min-height:0}
+  .options-heading{display:block}
+  .options-heading>p{margin-top:12px}
+  .debt-types-section{padding:42px 18px 44px}
+  .debt-types-grid{grid-template-columns:1fr;max-width:480px;gap:11px}
+  .debt-type-card{min-height:88px;padding:13px 16px 17px}
+  .debt-type-card h3{font-size:16px}
+  .debt-type-card p{font-size:13px}
+  .quote-section{padding:54px 20px;grid-template-columns:26px 1fr;gap:10px}
+  .faq-section{padding:54px 20px;gap:22px}
+  .faq summary{font-size:13px;line-height:1.5}
+  .last-cta{padding:42px 20px}
+  .last-cta h2{font-size:38px}
+  .footer{padding:28px 20px 0}
+  .footer-main{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+  .footer-main>p{max-width:280px}
+  .footer-links{width:100%;gap:14px}
+  .footer-disclosure{font-size:10px}
+  .footer-bottom{height:auto;min-height:52px;flex-wrap:wrap;gap:10px;padding:13px 0}
+  .assessment-page{padding:96px 18px 42px;gap:20px}
+  .assessment-intro h1{font-size:36px}
+  .assessment-intro>p{font-size:14px}
+  .assessment-benefits{grid-template-columns:1fr;gap:10px}
+  .assessment-form-wrap .form-card{padding:22px 18px 24px}
+  .form-top h3{font-size:20px}
+  .field-grid,.field-grid.compact{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+  .field input,.field select{height:46px;font-size:16px}
+  .field{font-size:12px}
+  .choice{height:auto;min-height:48px;font-size:13px}
+  .options-row{grid-template-columns:1fr}
+  .options-row .choice{font-size:13px}
+  .debt-options{gap:8px}
+  .debt-chip{min-height:38px;font-size:12px}
+  .form-actions .button{min-height:48px}
+  .sticky-solution-wrap{padding:8px 12px calc(8px + env(safe-area-inset-bottom))}
+  .site-shell.with-sticky-solution{padding-bottom:82px}
+}
+@media(max-width:380px){
+  .header{width:calc(100% - 20px);padding:7px 10px}
+  .brand{gap:6px;font-size:14px}
+  .brand-mark{width:30px;height:30px}
+  .brand small{font-size:7px;letter-spacing:2.4px}
+  .phone-link{padding:8px 9px;font-size:10px}
+  .phone-link{display:none}
+  .menu-button{width:32px;height:32px}
+  .hero-inner{padding-left:16px;padding-right:16px}
+  .hero h1{font-size:42px}
+  .hero-ctas .button{padding:0 13px;font-size:11px}
+  .hero-ctas .text-link{font-size:11px}
+  .home-summary{padding:19px 16px}
+  .proof-strip{padding:18px 16px;grid-template-columns:1fr}
+  .proof-label{grid-column:auto}
+  .debt-type-card{gap:12px}
+  .debt-type-icon{width:42px;height:42px;flex-basis:42px}
+  .form-card{padding-left:15px;padding-right:15px}
+  .form-top h3{font-size:18px}
+  .form-actions{gap:6px}
+  .back-button{padding:8px 2px}
+}
+@media(max-width:600px){
+  body{width:100%;overflow-x:clip}
+  .header{left:50%;width:calc(100% - 20px);max-width:calc(100% - 20px);padding:8px 11px;box-sizing:border-box}
+  .header .brand{min-width:0;flex:0 1 auto}
+  .header-right{display:none}
+  .menu-button{margin-left:auto;flex:0 0 36px}
+  .hero-inner{width:100%;max-width:700px;min-width:0;box-sizing:border-box;padding-left:20px;padding-right:20px}
+  .hero-inner>* ,.hero-copy,.hero-desc,.home-summary{min-width:0;max-width:100%;width:100%}
+  .hero-desc{overflow-wrap:break-word}
+  .home-summary{box-sizing:border-box;padding:22px 18px}
+  .summary-points span{min-width:0;line-height:1.4}
+  .assessment-page{width:100%;min-width:0;box-sizing:border-box}
+  .assessment-page>* ,.assessment-form-wrap,.form-card{min-width:0;max-width:100%;box-sizing:border-box}
+  .sticky-solution-wrap{width:100%;left:0;right:0;box-sizing:border-box}
+  .sticky-solution{width:100%;max-width:100%;box-sizing:border-box}
+  .debt-types-section,.debt-types-grid,.debt-type-card{min-width:0;max-width:100%;box-sizing:border-box}
+}
