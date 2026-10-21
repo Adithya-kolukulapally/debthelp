@@ -334,15 +334,26 @@ html{overflow-x:clip}
 }
 @media(max-width:600px){
   body{width:100%;overflow-x:clip}
-  .header{left:50%;width:calc(100% - 20px);max-width:calc(100% - 20px);padding:8px 11px;box-sizing:border-box}
+  .header{left:50%;transform:translateX(-50%);width:calc(100% - 20px);max-width:calc(100% - 20px);padding:8px 11px;box-sizing:border-box}
   .header .brand{min-width:0;flex:0 1 auto}
   .header-right{display:none}
   .menu-button{margin-left:auto;flex:0 0 36px}
+  .announcement{height:auto;min-height:32px;padding:7px 12px;text-align:center;font-size:9px;line-height:1.35}
+  .announcement-right{display:none}
   .hero-inner{width:100%;max-width:700px;min-width:0;box-sizing:border-box;padding-left:20px;padding-right:20px}
   .hero-inner>* ,.hero-copy,.hero-desc,.home-summary{min-width:0;max-width:100%;width:100%}
   .hero-desc{overflow-wrap:break-word}
   .home-summary{box-sizing:border-box;padding:22px 18px}
   .summary-points span{min-width:0;line-height:1.4}
+  .hero-bottom{height:auto;min-height:48px;padding:12px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;letter-spacing:.08em;font-size:7px}
+  .hero-bottom a{font-size:9px;white-space:nowrap}
+  .hero-bottom-right{grid-column:1/-1;text-align:center;border-top:1px solid #e5e9e0;padding-top:9px}
+  .proof-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:16px 12px;width:100%;max-width:none;padding:20px 18px}
+  .proof-strip>div:not(.proof-label){min-width:0;border:0;padding:0;margin:0;flex:auto}
+  .proof-label{grid-column:1/-1}
+  .proof-strip b{font-size:11px;line-height:1.4}
+  .proof-strip>div>span{font-size:10px;line-height:1.45}
+  .proof-sign{grid-column:1/-1;text-align:left!important;border-top:1px solid #e3e8e0!important;padding-top:14px!important}
   .assessment-page{width:100%;min-width:0;box-sizing:border-box}
   .assessment-page>* ,.assessment-form-wrap,.form-card{min-width:0;max-width:100%;box-sizing:border-box}
   .sticky-solution-wrap{width:100%;left:0;right:0;box-sizing:border-box}
