@@ -230,6 +230,10 @@ body{background:#fff}
 @media(max-width:760px){.section h2{font-size:40px}.section-intro>p{font-size:14px}.step-card{min-height:0;padding:19px}.step-card h3{font-size:18px}.step-card p{font-size:13px}.step-tag{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.process.reveal-enabled .section-intro,.process.reveal-enabled .step-card{opacity:1;transform:none;transition:none}.step-card{transition:none}.step-card:hover,.process.reveal-enabled .step-card.is-visible:hover{transform:none}}
 html{overflow-x:clip}
+.consent a{color:#315e4b;text-decoration:underline;text-underline-offset:2px}
+.consent p{margin:0}
+.consent label{cursor:pointer}
+.consent a:focus-visible,.footer-bottom a:focus-visible,.nav a:focus-visible,button:focus-visible{outline:3px solid #6e8cf1;outline-offset:3px;border-radius:3px}
 .mobile-contact-link{display:none}
 @media(max-width:860px){
   .header{top:10px;width:calc(100% - 32px);padding:8px 14px}
@@ -359,4 +363,10 @@ html{overflow-x:clip}
   .sticky-solution-wrap{width:100%;left:0;right:0;box-sizing:border-box}
   .sticky-solution{width:100%;max-width:100%;box-sizing:border-box}
   .debt-types-section,.debt-types-grid,.debt-type-card{min-width:0;max-width:100%;box-sizing:border-box}
+}
+
+/* Keep the home hero in a single readable column on narrow tablets and phones. */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:minmax(0,1fr)}
+  .hero-inner>*{width:100%;min-width:0;max-width:100%}
 }

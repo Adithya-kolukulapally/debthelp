@@ -35,7 +35,7 @@ Deno.serve(async (req) => {
   try {
     const body = await req.json()
     const required = ['firstName', 'lastName', 'email', 'phone', 'province', 'debtAmount', 'homeowner', 'ageRange', 'priorFiling']
-    if (required.some((key) => typeof body[key] !== 'string' || !body[key].trim()) ||
+    if (required.some((key) => typeof body[key] !== 'string' || !body[key].trim()) || body.contactConsent !== true ||
         !Array.isArray(body.debtTypes) || body.debtTypes.length === 0 ||
         !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(body.email)) {
       return json({ error: 'Please complete all required assessment fields.' }, 400)
@@ -47,6 +47,7 @@ Deno.serve(async (req) => {
       province: body.province, debt_amount_range: body.debtAmount, homeowner: body.homeowner,
       mortgage_equity: body.equity || null, debt_types: body.debtTypes.slice(0, 20),
       age_range: body.ageRange, prior_filing: body.priorFiling,
+      contact_consent_at: new Date().toISOString(),
       attribution: cleanAttribution(body.attribution),
     }
     const { data, error } = await supabase.from('assessments').insert(lead).select('id').single()

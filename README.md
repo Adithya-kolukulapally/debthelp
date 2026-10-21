@@ -66,7 +66,7 @@ Apply the database migrations in `supabase/migrations/`:
 npx supabase db push
 ```
 
-The migrations create the `public.assessments` table and add its `attribution` JSON column. Row Level Security is enabled, and the `anon` and `authenticated` roles are denied direct access. Submissions should go through the Edge Function.
+The migrations create the `public.assessments` table, add its `attribution` JSON column, and add `contact_consent_at` for recording affirmative contact consent. Row Level Security is enabled, and the `anon` and `authenticated` roles are denied direct access. Submissions should go through the Edge Function.
 
 ## Brevo email setup
 
